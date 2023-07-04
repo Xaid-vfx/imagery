@@ -1,4 +1,5 @@
 import './App.css';
+import Landing from './Pages/Landing/Landing';
 import SignIn from './Pages/Login/login';
 import { createRoot } from "react-dom/client";
 import {
@@ -17,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<SignIn />}/>
-          <Route path="/" element={<div><h1>Welcome</h1></div>} />
+          <Route path="/" element={<Landing/>} />
 
         </Routes>
       </BrowserRouter>
