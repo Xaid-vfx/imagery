@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './login.css';
 import { useState } from 'react';
+import Image from '../assets/images/side.jpeg'
 
 export default function SignIn() {
 
@@ -19,7 +20,7 @@ export default function SignIn() {
         <div className=' h-[100vh]'>
             <div className=' flex w-full h-full'>
                 <div className='w-5/12  overflow-hidden'>
-                    <img className='object-cover h-full w-full' src='https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?w=1800&t=st=1688478687~exp=1688479287~hmac=45e89ee4c5eca6f01bf4a8d5ba9ff08face8e14c3879929db8da1d2b2314c3ed' alt='1'></img>
+                    <img className='object-cover h-full w-full' src={Image} alt='1'></img>
                 </div>
                 <div className=' bg-slate-100 w-7/12'>
                     <div className='h-full flex justify-center items-center'>
