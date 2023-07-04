@@ -1,5 +1,5 @@
 import './App.css';
-import SignIn from './Pages/login';
+import SignIn from './Pages/Login/login';
 import { createRoot } from "react-dom/client";
 import {
   BrowserRouter,
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<SignIn />}/>
-            <Route path="/" element={<div><h1>Welcome</h1></div>} />
+          <Route path="/" element={<div><h1>Welcome</h1></div>} />
 
         </Routes>
       </BrowserRouter>
