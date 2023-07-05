@@ -9,6 +9,7 @@ import {
   Link,
   Router, Routes
 } from "react-router-dom";
+import Welcome from './Pages/Welcome/Welcome';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<SignIn />}/>
           <Route path="/" element={<Landing/>} />
+          <Route path="/Welcome" element={<Welcome/>} />
 
         </Routes>
       </BrowserRouter>

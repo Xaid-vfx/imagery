@@ -33,48 +33,62 @@ export default function SignIn() {
     }
     function loginWithEmailPass(e) {
         e.preventDefault()
-        signInWithEmailAndPassword(auth, LoginName, LoginPass)
-            .then((userCredential) => {
-                if (userCredential){
-                    setshowLoginError(false)
-                    navigate('/')
-                }
-            })
-            .catch((error) => {
-                setloginError("Incorrect Email or Password")
-                setshowLoginError(true)
-            })
+        if (LoginName != '' && LoginPass != '') {
+            signInWithEmailAndPassword(auth, LoginName, LoginPass)
+                .then((userCredential) => {
+                    if (userCredential) {
+                        setshowLoginError(false)
+                        navigate('/Welcome')
+                    }
+                })
+                .catch((error) => {
+                    setloginError("Incorrect Email or Password")
+                    setshowLoginError(true)
+                })
+        }
+        else {
+            setloginError("Please complete all fields")
+            setshowLoginError(true)
+        }
     }
     function signUpWithEmailPass(e) {
         e.preventDefault()
-        if (SignUpPass.length > 5) {
-            if (SignUpPass == SignUpCPass) {
-                createUserWithEmailAndPassword(auth, SignUpName, SignUpPass)
-                    .then((userCredential) => {
-                        console.log(userCredential);
-                        if(userCredential)
-                            setshowSignUpSuccessMessage(true)
-                    })
-                    .catch((error) => {
-                        if (error.code == 'auth/email-already-in-use') {
-                            seterror("Email already in use")
-                            setshowError(true);
-                        }
-                        
-                        if (error.code == "auth/invalid-email") {
-                            seterror("Enter a valid Email")
-                            setshowError(true);
-                        }
-                    })
+        if (SignUpPass != '' && SignUpName != '' && SignUpCPass != '') {
+            if (SignUpPass.length > 5) {
+                if (SignUpPass == SignUpCPass) {
+                    createUserWithEmailAndPassword(auth, SignUpName, SignUpPass)
+                        .then((userCredential) => {
+                            console.log(userCredential);
+                            if (userCredential){
+                                setshowSignUpSuccessMessage(true)
+                                setshowError(false)
+                            }
+                        })
+                        .catch((error) => {
+                            if (error.code == 'auth/email-already-in-use') {
+                                seterror("Email already in use")
+                                setshowError(true);
+                            }
+
+                            if (error.code == "auth/invalid-email") {
+                                seterror("Enter a valid Email")
+                                setshowError(true);
+                            }
+                        })
+                }
+                else {
+                    seterror("Password do not Match")
+                    setshowError(true);
+                }
             }
             else {
-                seterror("Password do not Match")
+                seterror("Password length should be more than 5 characters")
                 setshowError(true);
             }
         }
         else{
-            seterror("Password length should be more than 5 characters")
-            setshowError(true);
+            seterror("Please complete all fields")
+            setshowError(true)
         }
     }
 
@@ -92,10 +106,10 @@ export default function SignIn() {
                                 <p className='text-[.6em]'><small>The best collection of images are waiting for you</small></p>
                             </div>
                             {login == "login" && <div className='flex flex-col w-2/3'>
-                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-2 py-2 px-3 placeholder:text-xs' type='text' placeholder='Email' onChange={(e) => {
+                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-2 py-2 px-3 placeholder:text-xs' type='Email' placeholder='Email' onChange={(e) => {
                                     setLoginName(e.target.value)
                                 }} />
-                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='text' placeholder='Password' onChange={(e) => {
+                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='Password' placeholder='Password' onChange={(e) => {
                                     setLoginPass(e.target.value)
                                 }} />
                                 {showLoginError && <div className='text-sm mx-3 text-red-600'><small>{loginError}</small></div>}
@@ -105,13 +119,13 @@ export default function SignIn() {
                                 <button onClick={() => { handleClick2() }} className='py-3 mt-2 mb-8 text-xs cursor-pointer border bg-green-800 text-white rounded-3xl hover:bg-white hover:text-green-800 hover:border-green-800'>Create an Account</button>
                             </div>}
                             {login == "signup" && <div className='flex flex-col w-2/3'>
-                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='text' placeholder='Email' onChange={(e) => {
+                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='Email' placeholder='Email' onChange={(e) => {
                                     setSignUpName(e.target.value)
                                 }} />
-                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='text' placeholder='Password' onChange={(e) => {
+                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='Password' placeholder='Password' onChange={(e) => {
                                     setSignUpPass(e.target.value)
                                 }} />
-                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='text' placeholder='Confirm Password' onChange={(e) => {
+                                <input className='border focus:border-white focus:outline-none focus:outline-green-800 rounded-xl my-1 py-2 px-3 placeholder:text-xs' type='Password' placeholder='Confirm Password' onChange={(e) => {
                                     setSignUpCPass(e.target.value)
                                 }} />
                                 {showError && <div className='text-sm mx-3 text-red-600'><small>{error}</small></div>}

@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Background from './backg.jpg'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import Card from '../../components/Card/Card'
+import { useNavigate } from 'react-router-dom'
+import { auth } from '../../firebase'
+import { onAuthStateChanged } from 'firebase/auth'
 
 export default function () {
+    const navigate = useNavigate()
+    const [currentUser, setcurrentUser] = useState();
+    onAuthStateChanged(auth, (user) => {
+        setcurrentUser(user)
+        console.log(currentUser);
+    })
+    if (currentUser != null)
+        navigate('/Welcome')
     return (
         <div>
-            <Navbar />
+            {currentUser && <div>
+                <Navbar />
             <div className='bg-green-900 h-[60vh] relative'>
 
                 <div className='p-20'>
@@ -42,7 +54,7 @@ export default function () {
 
                 <div></div>
 
-            </div>
+            </div></div>}
         </div>
     )
 }
