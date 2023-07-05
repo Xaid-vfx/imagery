@@ -12,7 +12,7 @@ export default function Card() {
                 <div className='bg-slate-50 p-3 rounded-b'>
                     <div className='flex justify-between'>
                         <div className='text-lg font-semibold'>Landscape</div>
-                        <div className='text-lg font-semibold'>$20</div>
+                        <div className='text-lg font-semibold text-green-800'>$20</div>
                     </div>
                     <div className='text-sm  font-extralight'><small>A description about the image</small></div>
                     <button className='border border-green-900 px-4 py-2 mt-5 rounded-2xl text-sm hover:text-white hover:bg-green-900'>Add to Cart</button>

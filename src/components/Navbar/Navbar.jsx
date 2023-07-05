@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <div className='h-[10vh]  flex justify-center'>
+        <div className='h-[10vh] flex justify-center'>
             <div className='relative flex items-center justify-between h-full w-[95%] '>
                 <div className='bg-white flex items-center gap-3'>
                     <FaShoppingCart className='text-green-900 text-3xl'/>
