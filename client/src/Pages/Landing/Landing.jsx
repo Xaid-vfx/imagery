@@ -18,7 +18,7 @@ export default function () {
         navigate('/Welcome')
     return (
         <div>
-            {!currentUser && <div>
+            {currentUser == null && <div>
                 <Navbar />
             <div className='bg-green-900 h-[60vh] relative'>
 
