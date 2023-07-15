@@ -4,11 +4,11 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 app.use(express.json())
-// app.use(
-//   cors({
-//     origin: "https://snapshoot-owi9oku1a-xaid-vfx.vercel.app/",
-//   })
-// )
+app.use(
+  cors({
+    origin: "https://localhost:5500",
+  })
+)
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
 
