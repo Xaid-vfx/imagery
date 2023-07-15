@@ -1,6 +1,5 @@
 @media (min-width: 300px) and (max-width: 600px){
-    #signUpBtn{
-        display: none;
+    #searchBar input{
+        width: 100%;
     }
-    
 }

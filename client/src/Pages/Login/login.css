@@ -1,4 +1,14 @@
-
 .titlefont{
     font-family: 'Ysabeau SC', sans-serif;
+}
+@media (min-width: 300px) and (max-width: 600px){
+    #loginImage{
+        display: none
+    }
+    #loginItems{
+        width: 100%;
+    }
+    #loginItemsChild{
+        width: 85%;
+    }
 }

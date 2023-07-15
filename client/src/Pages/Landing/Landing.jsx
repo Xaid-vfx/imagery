@@ -6,6 +6,7 @@ import Card from '../../components/Card/Card'
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase'
 import { onAuthStateChanged } from 'firebase/auth'
+import './Landing.css'
 
 export default function () {
     const navigate = useNavigate()
@@ -19,14 +20,14 @@ export default function () {
     return (
         <div>
             {currentUser == null && <div>
-                <Navbar />
-            <div className='bg-green-900 h-[60vh] relative'>
+                <Navbar/>
+            <div id="greenBg" className='bg-green-900 h-[fit-content] relative mb-10'>
 
-                <div className='p-20'>
-                    <div>
-                        <div className='text-7xl text-white'>A perfect place for <br />Pictures enthusiast.</div>
-                        <div className='w-4/12 text-sm text-white font-thin my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt, explicabo provident et esse minima nobis deserunt nostrum, excepturi est perferendis ipsa id illum! Perferendis dolore consequuntur labore qui eum.</div>
-                        <div>
+                <div id="paraContainer" className='p-20'>
+                    <div className='flex flex-col justify-evenly  h-full'>
+                        <div id="paraContainerHeading" className='text-7xl  text-white'>A {window.innerWidth < 480 && <br/> }perfect place for <br />Pictures enthusiast.</div>
+                        <div id="paraContainerPara" className=' text-sm text-white font-thin my-5 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt, explicabo provident et esse minima nobis deserunt nostrum, excepturi est perferendis ipsa id illum! Perferendis dolore consequuntur labore qui eum.</div>
+                        <div className=''>
                             <button className='text-white flex items-center gap-1 text-sm font-light hover:underline'>
                                 <div>Learn More</div>
                                 <FaExternalLinkAlt />
@@ -34,17 +35,20 @@ export default function () {
                         </div>
                     </div>
                 </div>
-                <div className='px-20 my-10'>
+
+                </div>
+                <div id='secondSection' className='px-20 my-10'>
                     <div className='text-3xl font-semibold text-green-900 mb-5'>Todays Best Deals For You!</div>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 flex-wrap justify-between'>
                         <Card />
                         <Card />
                         <Card />
+                        
                     </div>
                 </div>
-                <div className='px-20 my-20'>
+                <div id='secondSection' className='px-20 my-10'>
                     <div className='text-3xl font-semibold text-green-900 mb-5'>Best Selling Pictures</div>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 flex-wrap'>
                         <Card />
                         <Card />
                         <Card />
@@ -54,7 +58,7 @@ export default function () {
 
                 <div></div>
 
-            </div></div>}
+            </div>}
         </div>
     )
 }

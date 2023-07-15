@@ -1,0 +1,56 @@
+@media (min-width: 300px) and (max-width: 600px){
+    #greenBg{
+        height: 82vh;
+    }
+    #paraContainer{
+        padding: 8%;
+        height: 100%;
+    }
+    #paraContainerPara{
+        width: 100%;
+        padding-block: 3%;
+    }
+    #paraContainerHeading{
+        line-height: 110%;
+    }
+    #secondSection{
+        padding: 5%;
+    }
+    #secondSection > div{
+        font-size: x-large;
+    }
+    @media only screen and (max-height: 775px) {
+        #paraContainerHeading{
+            font-size: 58px;
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    #greenBg{
+        height: 60vh;
+    }
+    #paraContainer{
+        padding: 8%;
+        height: 100%;
+    }
+    #paraContainerPara{
+        width: 100%;
+        padding-block: 3%;
+    }
+    #paraContainerHeading{
+        height: 100%;
+        line-height: 110%;
+    }
+    #secondSection{
+        padding: 10%;
+    }
+    #secondSection > div{
+        font-size: x-large;
+    }
+    @media only screen and (max-height: 775px) {
+        #paraContainerHeading{
+            font-size: 58px;
+        }
+    }
+}

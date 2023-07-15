@@ -94,13 +94,13 @@ export default function SignIn() {
 
     return (
         <div className=' h-[100vh]'>
-            <div className=' flex w-full h-full'>
-                <div className='w-5/12  overflow-hidden bg-green-800'>
+            <div className='flex w-full h-full'>
+                <div id='loginImage' className='w-5/12  overflow-hidden bg-green-800'>
                     <img className='object-cover h-full w-full' src={Image} alt='1'></img>
                 </div>
-                <div className=' bg-slate-100 w-7/12'>
+                <div id='loginItems' className=' bg-slate-100 w-7/12'>
                     <div className='h-full flex justify-center items-center'>
-                        <div className='flex justify-center items-center flex-col rounded-xl w-4/6 bg-white'>
+                        <div id='loginItemsChild' className='flex justify-center items-center flex-col rounded-xl w-4/6 bg-white'>
                             <div className='my-6 flex flex-col items-center justify-center'>
                                 <h1 className='text-3xl titlefont text-green-800'>Welcome</h1>
                                 <p className='text-[.6em]'><small>The best collection of images are waiting for you</small></p>

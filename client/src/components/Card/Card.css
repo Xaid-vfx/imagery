@@ -1,0 +1,18 @@
+@media (min-width: 300px) and (max-width: 600px){
+    #cardContainer{
+        width: 47%;
+    }
+    #cardTitle{
+        font-size: small;
+    }
+    #cardDesc{
+        font-size: x-small;
+        line-height:50%;
+    }
+    #cardBtn{
+        padding: 2px 6px;
+        font-size: xx-small;
+        border-radius: 10px;
+        margin: 0;
+    }
+}

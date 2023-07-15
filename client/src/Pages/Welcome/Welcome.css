@@ -1,0 +1,7 @@
+@media (min-width: 300px) and (max-width: 600px){
+    #secondSection{
+        margin-top: 0px;
+        padding-inline: 5%;
+        padding-block: 0;
+    }
+}
