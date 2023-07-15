@@ -14,8 +14,7 @@ export default function Card() {
     })
     function handleclick() {
         if (currentUser) {
-            fetch("https://imagery-tan.vercel.app/create-checkout-session", {
-                mode: 'no-cors',
+            fetch("https://snapshoot-iota.vercel.app/create-checkout-session", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
