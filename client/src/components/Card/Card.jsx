@@ -14,8 +14,8 @@ export default function Card() {
         setcurrentUser(user)
     })
     function handleclick() {
-        setloading(true)
-        if (currentUser) {            
+        if (currentUser) {
+            setloading(true)
             fetch("https://snapshoot-iota.vercel.app/create-checkout-session", {
                 method: "POST",
                 headers: {
@@ -28,6 +28,7 @@ export default function Card() {
                 }),
             })
                 .then(res => {
+                    setloading(false)
                     if (res.ok) return res.json()
                     return res.json().then(json => Promise.reject(json))
                 })
@@ -41,7 +42,6 @@ export default function Card() {
         else {
             navigate('/login')
         }
-        setloading(false)
     }
     return (
         <div id="cardContainer" className=' text-black w-[32%]'>
@@ -53,7 +53,7 @@ export default function Card() {
             <div className='desc'>
                 <div className='bg-slate-50 p-2 rounded-b'>
                     <div className='flex justify-between'>
-                        <div id="cardTitle" className='text-lg font-semibold'>Landscape {loading? "ji" : "na"}</div>
+                        <div id="cardTitle" className='text-lg font-semibold'>Landscape {loading? "hi" : "hey"}</div>
                         <div id="cardTitle" className='text-lg font-semibold text-green-800'>$20</div>
                     </div>
                     <div id="cardDesc" className='text-sm  font-extralight'><small >A description about the image</small></div>
