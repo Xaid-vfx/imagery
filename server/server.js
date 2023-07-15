@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://imagery-tan.vercel.app/",
+    origin: "https://snapshoot-owi9oku1a-xaid-vfx.vercel.app/",
   })
 )
 
