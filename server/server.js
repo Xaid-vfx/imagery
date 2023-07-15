@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://localhost:5500",
+    origin: "http://localhost:3003",
   })
 )
 
