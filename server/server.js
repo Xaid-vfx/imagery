@@ -44,5 +44,10 @@ app.post("/create-checkout-session", async (req, res) => {
     res.status(500).json({ error: e.message })
   }
 })
+app.use('/', (req,res) => {
+  res.json({message: "Hello ji"})
+}); 
 
-app.listen(5500)
+app.listen(5500, () => {
+  console.log('Server Started on Port 5500');
+})
