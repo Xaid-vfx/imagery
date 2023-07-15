@@ -9,11 +9,13 @@ import "./Card.css"
 export default function Card() {
     const navigate = useNavigate()
     const [currentUser, setcurrentUser] = useState();
+    const [loading, setloading] = useState(false);
     onAuthStateChanged(auth, (user) => {
         setcurrentUser(user)
     })
     function handleclick() {
-        if (currentUser) {
+        setloading(true)
+        if (currentUser) {            
             fetch("https://snapshoot-iota.vercel.app/create-checkout-session", {
                 method: "POST",
                 headers: {
@@ -39,6 +41,7 @@ export default function Card() {
         else {
             navigate('/login')
         }
+        setloading(false)
     }
     return (
         <div id="cardContainer" className=' text-black w-[32%]'>
@@ -50,7 +53,7 @@ export default function Card() {
             <div className='desc'>
                 <div className='bg-slate-50 p-2 rounded-b'>
                     <div className='flex justify-between'>
-                        <div id="cardTitle" className='text-lg font-semibold'>Landscape</div>
+                        <div id="cardTitle" className='text-lg font-semibold'>Landscape {loading? "ji" : "na"}</div>
                         <div id="cardTitle" className='text-lg font-semibold text-green-800'>$20</div>
                     </div>
                     <div id="cardDesc" className='text-sm  font-extralight'><small >A description about the image</small></div>
