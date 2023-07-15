@@ -15,7 +15,6 @@ export default function Card() {
     })
     function handleclick() {
         if (currentUser) {
-            setloading(true)
             fetch("https://snapshoot-iota.vercel.app/create-checkout-session", {
                 method: "POST",
                 headers: {
@@ -28,7 +27,6 @@ export default function Card() {
                 }),
             })
                 .then(res => {
-                    setloading(false)
                     if (res.ok) return res.json()
                     return res.json().then(json => Promise.reject(json))
                 })
