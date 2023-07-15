@@ -14,7 +14,8 @@ export default function Card() {
     })
     function handleclick() {
         if (currentUser) {
-            fetch("http://localhost:5500/create-checkout-session", {
+            fetch("https://imagery-tan.vercel.app/create-checkout-session", {
+                mode: 'no-cors',
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
