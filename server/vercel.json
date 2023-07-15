@@ -3,7 +3,7 @@
     "name": "snapshoot",
     "headers": [
         {
-          "source": "/api/(.*)",
+          "source": "/server/(.*)",
           "headers": [
             { "key": "Access-Control-Allow-Credentials", "value": "true" },
             { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -16,12 +16,6 @@
         {
             "src" : "./server.js",
             "use" : "@vercel/node"
-        }
-    ],
-    "routes" : [
-        {
-            "src": "/(.*)",
-            "dest": "/server.js"
         }
     ]
 }
