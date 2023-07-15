@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://snapshoot-owi9oku1a-xaid-vfx.vercel.app/",
+    origin: "https:localhost:5500",
   })
 )
 
