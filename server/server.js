@@ -48,6 +48,3 @@ app.use('/', (req,res) => {
   res.json({message: "Hello ji"})
 }); 
 
-app.listen(5500, () => {
-  console.log('Server Started on Port 5500');
-})
