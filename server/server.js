@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(
   cors({
-    origin: "http://localhost:3003",
+    origin: "https://imagery-tan.vercel.app/",
   })
 )
 
