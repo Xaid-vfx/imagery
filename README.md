@@ -115,11 +115,17 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Start the project
+3. Start the server
    ```sh
+   cd server
+   npm run devStart
+   ```
+4. Start the client
+   ```sh
+   cd client
    npm start
    ```
-
+Server and Client will start at port [5500] and [3000] respectively.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -217,3 +223,5 @@ Project Link: [https://github.com/Xaid-vfx/imagery](https://github.com/Xaid-vfx/
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [js-url]: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png
+[5500]: https://localhost:5500
+[3000]: https://localhost:3000
