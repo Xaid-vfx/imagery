@@ -178,7 +178,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@relaxxaid](https://twitter.com/relaxxaid) - mohdzaid.work@gmail.com
+Mohd Zaid - [@relaxxaid](https://twitter.com/relaxxaid) - mohdzaid.work@gmail.com
 
 Project Link: [https://github.com/Xaid-vfx/imagery](https://github.com/Xaid-vfx/imagery)
 
