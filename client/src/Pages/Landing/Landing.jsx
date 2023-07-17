@@ -26,7 +26,7 @@ export default function () {
                 <div id="paraContainer" className='p-20'>
                     <div className='flex flex-col justify-evenly  h-full'>
                         <div id="paraContainerHeading" className='text-7xl  text-white'>A {window.innerWidth < 480 && <br/> }perfect place for <br />Pictures enthusiast.</div>
-                        <div id="paraContainerPara" className=' text-sm text-white font-thin my-5 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt, explicabo provident et esse minima nobis deserunt nostrum, excepturi est perferendis ipsa id illum! Perferendis dolore consequuntur labore qui eum.</div>
+                        <div id="paraContainerPara" className=' text-sm text-white font-thin my-5 '>Snapshoot is a platform that caters to users seeking copyright-free images for a wide range of purposes. It provides an extensive array of images that can be purchased, in addition to offering a diverse collection of over 100 copyright-free images.</div>
                         <div className=''>
                             <button className='text-white flex items-center gap-1 text-sm font-light hover:underline'>
                                 <div>Learn More</div>
