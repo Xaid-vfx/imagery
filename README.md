@@ -76,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](docs/ProjectSS.png)
 
 
 Snapshoot is a platform that caters to users seeking copyright-free images for a wide range of purposes. It provides an extensive array of images that can be purchased, in addition to offering a diverse collection of over 100 copyright-free images. This platform serves as a valuable resource for individuals in need of high-quality visuals while ensuring they have the necessary rights to use the images without any copyright restrictions.
