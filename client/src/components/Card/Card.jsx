@@ -6,7 +6,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import "./Card.css"
 
-export default function Card() {
+export default function Card(props) {
     const navigate = useNavigate()
     const [currentUser, setcurrentUser] = useState();
     const [loading, setloading] = useState(false);
@@ -44,17 +44,17 @@ export default function Card() {
     return (
         <div id="cardContainer" className=' text-black w-[32%]'>
             <div>
-                <div className='rounded-t overflow-hidden hover:cursor-cell'>
-                    <img className='rounded-t hover:scale-125 transition-all duration-700' src='https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg'></img>
+                <div className='cardImageContainer flex rounded-t h-[30vh] overflow-hidden hover:cursor-cell'>
+                    <img className='justify-center w-[100%] h-[120%] cardImage rounded-t hover:scale-125 transition-all duration-700' src={props.image}></img>
                 </div>
             </div>
             <div className='desc'>
                 <div className='bg-slate-50 p-2 rounded-b'>
                     <div className='flex justify-between'>
-                        <div id="cardTitle" className='text-lg font-semibold'>Landscape {loading? "hi" : "hey"}</div>
-                        <div id="cardTitle" className='text-lg font-semibold text-green-800'>$20</div>
+                        <div id="cardTitle" className='text-lg font-semibold'>{props.name}</div>
+                        <div id="cardTitle" className='text-lg font-semibold text-green-800'>${props.price}</div>
                     </div>
-                    <div id="cardDesc" className='text-sm  font-extralight'><small >A description about the image</small></div>
+                    <div id="cardDesc" className='text-sm  font-extralight'><small >{props.desc}</small></div>
                     <div className='rating flex my-1'>
                         {[1, 2, 3, 4, 5].map(e => {
                             return <AiFillStar id="cardDesc" color='rgb(20 83 45 / var(--tw-text-opacity))' />

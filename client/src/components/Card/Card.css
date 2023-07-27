@@ -1,4 +1,8 @@
 @media (min-width: 300px) and (max-width: 600px){
+    .cardImageContainer{
+        overflow: hidden;
+        height: 12vh;
+    }
     #cardContainer{
         width: 47%;
     }
