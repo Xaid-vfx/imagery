@@ -22,7 +22,7 @@ export default function Card(props) {
                 },
                 body: JSON.stringify({
                     items: [
-                        { id: 1, quantity: 1 }
+                        { id: 1, quantity: 1, image: props.image, price: props.price, name: props.name}
                     ],
                 }),
             })

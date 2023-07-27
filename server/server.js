@@ -28,10 +28,10 @@ app.post("/create-checkout-session", async (req, res) => {
           price_data: {
             currency: "inr",
             product_data: {
-              name: storeItem.name,
-              images: ['https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg']
+              name: item.name,
+              images: item.image
             },
-            unit_amount: storeItem.priceInCents,
+            unit_amount: item.price * 100,
           },
           quantity: item.quantity,
         }
