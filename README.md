@@ -30,9 +30,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+<!--   <a href="https://github.com/github_username/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">SnapShoot</h3>
 
@@ -115,11 +115,17 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Start the project
+3. Start the server
    ```sh
+   cd server
+   npm run devStart
+   ```
+4. Start the client
+   ```sh
+   cd client
    npm start
    ```
-
+Server and Client will start at port [5500] and [3000] respectively.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -187,18 +193,18 @@ Project Link: [https://github.com/Xaid-vfx/imagery](https://github.com/Xaid-vfx/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Xaid-vfx/imagery.svg?style=for-the-badge
+[contributors-url]: https://github.com/Xaid-vfx/imagery/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Xaid-vfx/imagery.svg?style=for-the-badge
+[forks-url]: https://github.com/Xaid-vfx/imagery/network/members
+[stars-shield]: https://img.shields.io/github/stars/Xaid-vfx/imagery.svg?style=for-the-badge
+[stars-url]: https://github.com/Xaid-vfx/imagery/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Xaid-vfx/imagery.svg?style=for-the-badge
+[issues-url]: https://github.com/Xaid-vfx/imagery/issues
+[license-shield]: https://img.shields.io/github/license/Xaid-vfx/imagery.svg?style=for-the-badge
+[license-url]: https://github.com/Xaid-vfx/imagery/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/mohd-zaid-3889801b7/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -217,3 +223,5 @@ Project Link: [https://github.com/Xaid-vfx/imagery](https://github.com/Xaid-vfx/
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [js-url]: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png
+[5500]: https://localhost:5500
+[3000]: https://localhost:3000
