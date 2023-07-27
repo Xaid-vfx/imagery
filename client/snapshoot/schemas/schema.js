@@ -24,5 +24,10 @@ export default {
         type: 'number',
         title: 'Price'
       },
+      {
+        name: 'id',
+        type: 'number',
+        title: 'Id'
+      }
     ]
   }
