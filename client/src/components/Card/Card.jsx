@@ -52,7 +52,7 @@ export default function Card(props) {
                 <div className='bg-slate-50 p-2 rounded-b'>
                     <div className='flex justify-between'>
                         <div id="cardTitle" className='text-lg font-semibold'>{props.name}</div>
-                        <div id="cardTitle" className='text-lg font-semibold text-green-800'>${props.price}</div>
+                        <div id="cardTitle" className='text-lg font-semibold text-green-800'>₹{props.price}</div>
                     </div>
                     <div id="cardDesc" className='text-sm  font-extralight'><small >{props.desc}</small></div>
                     <div className='rating flex my-1'>
