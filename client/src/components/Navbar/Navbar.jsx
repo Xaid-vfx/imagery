@@ -38,10 +38,11 @@ export default function Navbar(props) {
                         <button id="signUpBtn" className='bg-white border border-green-900 text-green-900 py-2 rounded px-6 hover:bg-green-900 hover:text-white text-sm'>Sign up</button></Link>
                 </div>
                     :
-                    <div onMouseEnter={()=>{handleEnter()}} onMouseLeave={()=>{handleExit()}} className='flex gap-2 items-center  border rounded-xl p-1 border-white hover:cursor-pointer hover:border-slate-300'>
+                    <div onMouseEnter={()=>{handleEnter()}} onMouseLeave={()=>{handleExit()}} className='flex gap-2 items-center  border rounded p-1 border-white hover:cursor-pointer hover:border-slate-300'>
                         <FaUserCircle />
-                        <div className='text-sm'>{props.user.email.split('@')[0]}<BiSolidDownArrow className='inline w-4/12' />
+                        <div className='text-sm'>{props.user.email.split('@')[0]}
                         </div>
+                        <BiSolidDownArrow className='inline w-4/12' />
                         <div id="outdropdown" onClick={()=>{
                             SignOut()
                         }} class="flex flex-col absolute bottom-0 border bg-slate-200 px-1 py-0.5 rounded hidden hover:bg-slate-400">
